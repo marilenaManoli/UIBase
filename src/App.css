@@ -174,5 +174,6 @@ text-decoration: none;
   .webcam-capture-holder {
 	margin: 0 auto;
 	border-radius: 5px;
+	width: 100%;
   }
   

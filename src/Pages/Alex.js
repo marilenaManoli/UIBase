@@ -16,7 +16,7 @@ class Alex extends Component {
 					{/* <div style= {{width: "400px", height: "300px", content: "justify"}}> */}
 						{/* TODO: Camera needs to scale properly to the page - right now it is hard coding the size. */}
 						<p>Webcam capture below</p>
-						<WebcamStreamCapture style={{width: "50%", height: "50%"}}/>
+						<WebcamStreamCapture/>
 					{/* </div> */}
 					
 				</div>
