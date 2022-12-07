@@ -177,3 +177,13 @@ text-decoration: none;
 	width: 100%;
   }
   
+
+  .logo-image {
+	background-image: url(images/logo-color.svg);
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  }

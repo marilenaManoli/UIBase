@@ -5,15 +5,15 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-			<nav class="navbar navbar-dark bg-dark" id = 'navbar'>
-				{/* <a class="navbar-brand" href="#"></a> */}
-				<h1> LARKS APP</h1>
+				<nav class="navbar navbar-dark bg-dark" id = 'navbar'>
+					{/* <a class="navbar-brand" href="#"></a> */}
+
 				</nav>
 			</header>
 			<body>
 				<form class="login-form" action="./" method="POST">
 					<div class="login-form__title-box">
-						<h2>Larks login header</h2> 
+						<div class = "logo-image"></div>
 					</div>
 					<div class="login-form__content">
 						<div class="login-form__header">Login to your account</div>
