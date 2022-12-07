@@ -28,10 +28,29 @@ class Home extends Component {
 				<header className="App-header">
 					<h1>Home</h1>
 				</header>
-				<body className="App-body">
+				<body className="login-form">
+
+					<div className = "btn-row">
 					<Link to="/alex">
-						<button>Alex's App</button>
+						<button className="btn-choice">Alex's App</button>
 					</Link>
+					<Link to="/alex">
+						<button className="btn-choice">Kevins's App</button>
+					</Link>
+					<Link to="/alex">
+						<button className="btn-choice">Lanre's App</button>
+					</Link>
+					</div>
+
+					<div className = "btn-row">
+					<Link to="/alex">
+						<button className="btn-choice">Shreyas' App</button>
+					</Link>
+					<Link to="/alex">
+						<button className="btn-choice">Ramat's App</button>
+					</Link>
+					</div>
+					
 					<button onClick={this.getEC2}> Get EC2 </button>
 				</body>
 			</div>
