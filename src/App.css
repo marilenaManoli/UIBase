@@ -144,8 +144,9 @@ text-decoration: none;
 /* Right now webcam is using the whole page size for resizing, not the element that it is within */
 
 .webcam{
-	width:fit-content;
+	width: fit-content;
 	height:fit-content;
+	border-radius: 5px;
 }
 .btn-choice {
 	
@@ -167,5 +168,11 @@ text-decoration: none;
 	.btn-choice {
 	  width: 90%;
 	}
+  }
+
+
+  .webcam-capture-holder {
+	margin: 0 auto;
+	border-radius: 5px;
   }
   

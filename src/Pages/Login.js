@@ -28,8 +28,8 @@ function App() {
 						</div>
 					</div>
 				</form>
-        		</body>
-				</div>
+        	</body>
+		</div>
 	);
 }
 
