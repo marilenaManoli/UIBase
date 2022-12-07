@@ -1,6 +1,8 @@
 import React from "react";
 import Webcam from "react-webcam";
 
+
+
 const WebcamStreamCapture = () => {
 	const webcamRef = React.useRef(null);
 	const mediaRecorderRef = React.useRef(null);
@@ -47,9 +49,10 @@ const WebcamStreamCapture = () => {
 		}
 	}, [recordedChunks]);
 
+	// className added to webcam to allow edits with css
 	return (
 		<>
-			<Webcam audio={false} ref={webcamRef} />
+			<Webcam className = "webcam" audio={false} ref={webcamRef} />
 			{capturing ? (
 				<button onClick={handleStopCaptureClick}>Stop Capture</button>
 			) : (
@@ -59,5 +62,6 @@ const WebcamStreamCapture = () => {
 		</>
 	);
 };
+
 
 export default WebcamStreamCapture;

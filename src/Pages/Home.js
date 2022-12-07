@@ -23,6 +23,7 @@ class Home extends Component {
 
 	render() {
 		return (
+			// TODO: Need to create page that will present app options in nicer way.
 			<div className="App">
 				<header className="App-header">
 					<h1>Home</h1>
@@ -34,6 +35,8 @@ class Home extends Component {
 					<button onClick={this.getEC2}> Get EC2 </button>
 				</body>
 			</div>
+			
+
 		);
 	}
 }

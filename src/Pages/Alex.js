@@ -11,8 +11,15 @@ class Alex extends Component {
 				<header className="App-header">
 					<h1>Alex's app</h1>
 				</header>
-				<body className="App-body">
-					<WebcamStreamCapture />
+				<body>
+				<div className="login-form__content">
+					<div id = "VidCapture">
+						{/* TODO: Camera needs to scale properly to the page - right now it is hard coding the size. */}
+						<p>Webcam capture below</p>
+						<WebcamStreamCapture className = "video"/>
+					</div>
+					
+				</div>
 					<Link to="/home">
 						<button> Back </button>
 					</Link>
@@ -23,3 +30,5 @@ class Alex extends Component {
 }
 
 export default Alex;
+
+
