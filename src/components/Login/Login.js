@@ -44,10 +44,10 @@ function Login({ setToken }) {
 				password,
 			});
 
-			console.log(" TOK");
-			console.log(token);
+			// console.log("TOK");
+			// console.log(token);
 
-			token ? setIsValid(true) : setIsValid(false);
+			// token ? setIsValid(true) : setIsValid(false);
 
 			// Set the token of the application
 			console.log("Setting Token");
