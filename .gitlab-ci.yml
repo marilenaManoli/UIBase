@@ -2,6 +2,7 @@ stages:
   - build
   - static analysis
   - test
+  - deploy
   - production
 
 build-job:
