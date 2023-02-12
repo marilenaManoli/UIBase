@@ -28,7 +28,7 @@ functional-tests:
   stage: test
   script:
     - npm i
-    - npx cypress run --spec cypress/e2e_tests/functional_tests/*.cy.js
+    - npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
 
 deploy-prod:
   stage: deploy
@@ -42,4 +42,4 @@ post-production-tests:
   stage: production
   script:
     - npm i
-    - npx cypress run --spec cypress/e2e_tests/system_tests/*.cy.js
+    - npx cypress run --spec "cypress/e2e_tests/system_tests/*.cy.js"
