@@ -1,0 +1,31 @@
+stages:
+  - build
+  - static analysis
+  - test
+  - production
+
+build-job:
+  stage: build
+  script:
+    - npm run build
+
+lint:
+  stage: static analysis
+  script:
+    - npm run lint
+
+functional-tests:
+  stage: test
+  script:
+    - npx cypress run --spec cypress/e2e_tests/functional_tests/*.cy.js
+
+deploy-prod:
+  stage: deploy
+  script:
+    - npm run client-deploy
+  environment: production
+
+post-production-tests:
+  stage: production
+  script:
+    - npx cypress run --spec cypress/e2e_tests/system_tests/*.cy.js

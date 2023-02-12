@@ -10,8 +10,9 @@ class Kevin extends Component {
 		return (
 			<div className="App">
 				<Header />
-				<h1>Kevin's app</h1>
+				<h1>Kevin&apos;s app</h1>
 				<div className="App-body">
+					<WebcamStreamCapture />
 					<Link to="/home">
 						<button> Back </button>
 					</Link>

@@ -11,7 +11,7 @@ class Ramat extends Component {
 		return (
 			<div className="App">
 				<Header />
-				<h1>Ramat's app</h1>
+				<h1>Ramat&apos;s app</h1>
 				<div className="App-body">
 					<Link to="/home">
 						<button> Back </button>

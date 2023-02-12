@@ -29,8 +29,8 @@ class Home extends Component {
 
 	render() {
 		return (
-			// TODO: Need to create page that will present app options in nicer way.
-			// TODO: Need to create page that will present app options in nicer way.
+		// TODO: Need to create page that will present app options in nicer way.
+		// TODO: Need to create page that will present app options in nicer way.
 
 			<div className="App">
 				<Header />

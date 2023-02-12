@@ -11,7 +11,7 @@ class Shreyas extends Component {
 		return (
 			<div className="App">
 				<Header />
-				<h1>Shreyas' app</h1>
+				<h1>Shreyas&apos; app</h1>
 				<body>
 					<div className="webcam-capture-holder">
 						<p>Webcam capture below (to use flash please brighten your screen)</p>

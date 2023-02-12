@@ -1,9 +1,9 @@
 import React from "react";
 import Main from "../../Main";
 import "../App/App.css";
-import Login from '../Login/Login';
-import useToken from '../App/useToken';
-import { useLocation } from 'react-router-dom'
+import Login from "../Login/Login";
+import useToken from "../App/useToken";
+import { useLocation } from "react-router-dom"
 
 // This function Returns the current page the user is on
 function GetCurrentPage() {

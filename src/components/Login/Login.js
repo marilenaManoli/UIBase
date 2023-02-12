@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -40,7 +41,7 @@ function Login({ setToken }) {
 	const navigate = useNavigate();
 
 	// This function to calls the login function which returns after a login request
-	const handleSubmit = async (e) => {
+	const handleSubmit = async () => {
 		const email = document.getElementById("login_email").value;
 		const password = document.getElementById("login_password").value;
 
@@ -82,27 +83,27 @@ function Login({ setToken }) {
 						<h1>LARKS APP</h1>
 					</nav>
 				</header>
-				<div class="login-form">
-					<div class="login-form__content">
-						<div class="login-form__header">Log into an existing account below:</div>
-						<label for="login_email" className="form-labels">
+				<div className="login-form">
+					<div className="login-form__content">
+						<div className="login-form__header">Log into an existing account below:</div>
+						<label htmlFor="login_email" className="form-labels">
 							Enter Email:
 							<input
 								data-cy="loginEmail"
 								id="login_email"
-								class="login-form__input"
+								className="login-form__input"
 								type="text"
 								placeholder="Email"
 							/>
 						</label>
 
-						<label for="login_password" className="form-labels">
+						<label htmlFor="login_password" className="form-labels">
 							{" "}
 							Enter Password:
 						</label>
 						<input
 							id="login_password"
-							class="login-form__input"
+							className="login-form__input"
 							type="password"
 							placeholder="Password"
 							data-cy="loginPassword"
@@ -110,7 +111,7 @@ function Login({ setToken }) {
 
 						<div>
 							<button
-								class="login-form__button"
+								className="login-form__button"
 								data-cy="loginBttn"
 								type="submit"
 								onClick={async () => {
@@ -122,20 +123,20 @@ function Login({ setToken }) {
 						</div>
 
 						<Link to="/signup">
-							<button class="login-form__button" data-cy="loginSignUpBttn">
+							<button className="login-form__button" data-cy="loginSignUpBttn">
 								{" "}
 								Sign Up{" "}
 							</button>
 						</Link>
 
 						{isFilled === false && (
-							<p data-cy="loginError" class="error-message">
+							<p data-cy="loginError" className="error-message">
 								Please enter a username and password
 							</p>
 						)}
 
 						{isValid === false && (
-							<p data-cy="loginError" class="error-message">
+							<p data-cy="loginError" className="error-message">
 								Your username or password is incorrect. Please try again.
 							</p>
 						)}
@@ -213,5 +214,7 @@ function Login({ setToken }) {
 // Login.propTypes = {
 // 	setToken: PropTypes.func.isRequired
 // }
-
+Login.propTypes = {
+	setToken: PropTypes.string,
+};
 export default Login;

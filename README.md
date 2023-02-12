@@ -63,14 +63,22 @@ Or you can run it on a chromium browser using:
 
 # Deploying to S3
 
-First you need to rebuild the app using
+You need to set up AWS CLI ion your machuine. You'll need to connect to Alex's account. You can follow AWS's tutorial here: https://docs.aws.amazon.com/polly/latest/dg/getting-started-cli.html. You'll also need to set it up by folliowing this tutorial: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+
+To deploy to the S3 you need to run the following command:
+
+### `npm run client-deploy`
+
+This command is a series of three commands. For an explanation of what they do see below
+
+1. it need to rebuild the app using
 
 ### `npm run build`
 
-Then you need to sync what you have locally with the S3 bucket using:
+2. Then it needs to sync what you have locally with the S3 bucket using:
 
 ### `client-s3-deploy`
 
-After that, you need to create an invalidation for ther cloudront which will clear it's cache for the app build and allow the changes made to the S3 to be visible. For this run:
+After that, it needs to create an invalidation for the cloudront which will clear it's cache for the app build and allow the changes made to the S3 to be visible. For this run:
 
 ### `create-cloudfront-invalidation`
