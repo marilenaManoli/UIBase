@@ -4,6 +4,7 @@ default:
 cache:
   paths:
     - node_modules/
+    - /root/.cache/Cypress
 
 stages:
   - build
@@ -36,7 +37,6 @@ deploy-prod:
   script:
     - npm i
     - npm run client-deploy
-  environment: production
 
 post-production-tests:
   stage: production
