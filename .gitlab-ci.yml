@@ -2,9 +2,7 @@ default:
   image: node:latest
 
 cache:
-  paths:
-    - node_modules/
-    - /root/.cache/Cypress
+  paths: ~/.cache
 
 stages:
   - build
