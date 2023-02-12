@@ -71,7 +71,7 @@ To deploy to the S3 you need to run the following command:
 
 This command is a series of three commands. For an explanation of what they do see below
 
-1. it need to rebuild the app using
+1. It needs to rebuild the app using
 
 ### `npm run build`
 
