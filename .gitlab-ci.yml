@@ -1,6 +1,10 @@
 default:
   image: node:latest
 
+cache:
+  paths:
+    - node_modules/
+
 stages:
   - build
   - static analysis
@@ -17,20 +21,25 @@ build-job:
 lint:
   stage: static analysis
   script:
+    - npm i eslint
     - npm run lint
 
 functional-tests:
   stage: test
   script:
+    - npm i
     - npx cypress run --spec cypress/e2e_tests/functional_tests/*.cy.js
 
 deploy-prod:
   stage: deploy
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   script:
+    - npm i
     - npm run client-deploy
   environment: production
 
 post-production-tests:
   stage: production
   script:
+    - npm i
     - npx cypress run --spec cypress/e2e_tests/system_tests/*.cy.js
