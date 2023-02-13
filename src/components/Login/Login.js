@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App/App.css";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 let BASEURL = "";
 process.env.NODE_ENV === "development"

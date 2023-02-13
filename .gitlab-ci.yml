@@ -25,11 +25,12 @@ lint:
     - npm run lint
 
 functional-tests:
+  image: cypress/base
   stage: test
   script:
     - npm i xvfb
     - npx cypress verify
-    - npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
+    - npm run cypress:functional-tests
 
 deploy-prod:
   stage: deploy
@@ -40,9 +41,9 @@ deploy-prod:
     - npm run client-deploy
 
 post-production-tests:
+  image: cypress/base
   stage: production
   script:
-    - npm
     - npm i xvfb
     - npx cypress verify
     - npx cypress run --spec "cypress/e2e_tests/system_tests/*.cy.js"
