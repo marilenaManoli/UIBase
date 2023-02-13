@@ -46,6 +46,7 @@ post-production-tests:
   image: cypress/base
   stage: production
   script:
+    - npm i
     - npm i xvfb
     - npm i cypress --save-dev
     - npx cypress verify
