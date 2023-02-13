@@ -27,20 +27,23 @@ lint:
 functional-tests:
   stage: test
   script:
-    - npm i
-    - npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
+    - npm
+    - npm i xvfb
+    - xvfb-run npx cypress verify
+    - xvfb-run npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
 
 deploy-prod:
   stage: deploy
   image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   script:
     - npm i
-    - cyopress install
+    - npm i xvfb
     - npm run client-deploy
 
 post-production-tests:
   stage: production
   script:
     - npm
-    - cyopress install
-    - npx cypress run --spec "cypress/e2e_tests/system_tests/*.cy.js"
+    - npm i xvfb
+    - xvfb-run npx cypress verify
+    - xvfb-run npx cypress run --spec "cypress/e2e_tests/system_tests/*.cy.js"
