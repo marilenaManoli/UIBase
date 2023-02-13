@@ -27,7 +27,6 @@ lint:
 functional-tests:
   stage: test
   script:
-    - npm
     - npm i xvfb
     - npx cypress verify
     - npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
