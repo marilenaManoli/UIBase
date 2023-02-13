@@ -31,6 +31,7 @@ functional-tests:
     - npm i xvfb
     - npm i cypress --save-dev
     - npx cypress verify
+    - npm run start
     - npx cypress run --spec "cypress/e2e_tests/functional_tests/*.cy.js"
 
 deploy-prod:
@@ -48,4 +49,5 @@ post-production-tests:
     - npm i xvfb
     - npm i cypress --save-dev
     - npx cypress verify
+    - npm run start
     - npx cypress run --spec "cypress/e2e_tests/system_tests/*.cy.js"
