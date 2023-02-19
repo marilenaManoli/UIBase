@@ -36,7 +36,7 @@
 		"create-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id E1KMTDTJ1HCMXR --paths /*",
 		"client-deploy": "npm run build && npm run client-s3-deploy && npm run create-cloudfront-invalidation",
 		"lint": "npx eslint src/",
-		"cypress:functional-tests": "npx cypress run --spec cypress/e2e_tests/functional_tests/*.cy.js"
+		"cypress:functional-tests": "npm run start && npx cypress run --spec 'cypress/e2e_tests/functional_tests/*.cy.js'"
 	},
 	"eslintConfig": {
 		"extends": [
