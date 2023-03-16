@@ -16,21 +16,12 @@ class Kevin extends Component {
 				<div className="App-body">
 					<h2> Iteration 1 - Simple Case</h2>
 
-					<h3> Instructions:</h3>
-					<ol>
-						<li>Take a picture of Skin Lesion on body. Ensure the image is clear and the skin lesion is the focus of the image.</li>
-						<li>Submit the image for identification.</li>
-						<li>Await response.</li>
-					</ol>
-
-					<Link to="/kevin/take_photo">
-						<button> Continue </button>
-					</Link>
+					<h3> Take Photo of Skin Lesion</h3>
+					
 
 
-
-				{/* <p style={{ textAlign: "center", marginBottom: "20px" }}> Webcam Capture </p>
-						<WebcamCapture context="kevin"/> */}
+				<p style={{ textAlign: "center", marginBottom: "20px" }}> Webcam Capture </p>
+						<WebcamCapture context="kevin"/>
 					<Link to="/home">
 						<button> Back </button>
 					</Link>

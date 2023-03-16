@@ -131,6 +131,14 @@ const WebcamCapture = (props) => {
   }
 
 
+  // Following Shreyas' Implementation of rerouting user based on backend reponse
+
+  const skin_outcome = (serverResponse) => {
+    if (serverResponse === 0) navigate("/kevin/outcome_negative", { replace: true });
+    else navigate("/kevin/outcome_positive", { replace: true });
+  }
+
+
   //two buttons, one for taking pictures with flash and one for without
   return (
     <>
@@ -158,6 +166,16 @@ const WebcamCapture = (props) => {
         {context === "shreyas" && serverResponse === 1 && (
           tons_outcome(serverResponse)
         )}
+
+
+        {/* Implementation of Skin Cancer tool using shreyas' routing approach */}
+        {context === "kevin" && serverResponse === 0 && (
+          skin_outcome(serverResponse)
+        )}
+        {context === "kevin" && serverResponse === 1 && (
+          skin_outcome(serverResponse)
+        )}
+
       </div>
     </>
   );

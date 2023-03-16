@@ -10,6 +10,10 @@ import Alex from "./components/Alex/Alex";
 import Alex2 from "./components/Alex/Alex2";
 import Ramat from "./components/Ramat/Ramat";
 import Kevin from "./components/Kevin/Kevin";
+import Kevin_TakePhoto from "./components/Kevin/Kevin_TakePhoto";
+import Kevin_OutcomePositive from "./components/Kevin/Kevin_OutcomePositive";
+import Kevin_OutcomeNegative from "./components/Kevin/Kevin_OutcomeNegative";
+
 import Shreyas from "./components/Shreyas/Shreyas";
 import TonsPhotoInstructions from "./components/Shreyas/TonsPhotoInstructions";
 import TonsillitisOutcome1 from "./components/Shreyas/TonsillitsOutcome1";
@@ -35,6 +39,9 @@ const Main = () => {
 			<Route exact path="/alex/alex2" element={<Alex2 />}></Route>
 			<Route exact path="/ramat" element={<Ramat />}></Route>
 			<Route exact path="/kevin" element={<Kevin />}></Route>
+			<Route exact path="/kevin/take_photo" element={<Kevin_TakePhoto />}></Route>
+			<Route exact path="/kevin/outcome_positive" element={<Kevin_OutcomePositive />}></Route>
+			<Route exact path="/kevin/outcome_negative" element={<Kevin_OutcomeNegative />}></Route>
 			<Route exact path="/shreyas/shreyas" element={<Shreyas />}></Route>
 			<Route exact path="/shreyas/tonsillitis_instructions" element={<TonsPhotoInstructions />}></Route>
 			<Route exact path="/shreyas/tonsillitis_outcome_1" element={<TonsillitisOutcome1 />}></Route>
