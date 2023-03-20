@@ -25,10 +25,14 @@ const WebcamCapture = (props) => {
   let context = props.context || "upload";
   context = context.toString();
 
+  let inputValues = props.inputValues;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", imageSrc);
+    formData.append("input_value_1",inputValues.input1)
+    formData.append("input_value_2",inputValues.input2)
     const response = await axios(BASEURL + context, {
       method: 'post',
       data: formData,
